@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kraftbase/screens/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,36 +41,51 @@ class HomePage extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: ListView(
-            children: const [
+            children: [
               ListTile(
-                title: Text(
+                title: const Text(
                   "Login Screen",
                   style: TextStyle(color: Colors.white),
                 ),
-                trailing: Icon(
+                trailing: const Icon(
                   Icons.keyboard_arrow_right_rounded,
                   color: Colors.white,
                 ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const LoginScreen();
+                      },
+                    ),
+                  );
+                },
+                splashColor: Colors.transparent,
               ),
               ListTile(
-                title: Text(
+                title: const Text(
                   "Home Screen",
                   style: TextStyle(color: Colors.white),
                 ),
-                trailing: Icon(
+                trailing: const Icon(
                   Icons.keyboard_arrow_right_rounded,
                   color: Colors.white,
                 ),
+                onTap: () {},
+                splashColor: Colors.transparent,
               ),
               ListTile(
-                title: Text(
+                title: const Text(
                   "Event Screen",
                   style: TextStyle(color: Colors.white),
                 ),
-                trailing: Icon(
+                trailing: const Icon(
                   Icons.keyboard_arrow_right_rounded,
                   color: Colors.white,
                 ),
+                onTap: () {},
+                splashColor: Colors.transparent,
               ),
             ],
           ),
