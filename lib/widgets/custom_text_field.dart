@@ -76,7 +76,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
       obscureText: _passwordVisible,
       obscuringCharacter: '●',
       cursorColor: AppColors.labelTextColor,
-      onTapOutside: (_) => focusNode.unfocus(),
+      onTap: () =>
+          focusNode.hasFocus ? focusNode.unfocus() : focusNode.requestFocus(),
       decoration: textFieldDecoration,
     );
   }
