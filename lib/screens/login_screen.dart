@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:kraftbase/resources/app_colors.dart';
+import 'package:kraftbase/widgets/custom_text_field.dart';
 import 'package:kraftbase/widgets/log_in_sign_up_widget.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -7,7 +10,67 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LogInSignUpWidget(
-      child: Container(),
+      child: Stack(
+        children: [
+          Container(
+            margin: const EdgeInsets.only(
+              top: 176.0,
+              left: 20.0,
+              right: 20.0,
+            ),
+            padding: const EdgeInsets.only(top: 60.0),
+            height: double.infinity,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: AppColors.whiteColor,
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12.0),
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 12.0,
+                  ),
+                  Text(
+                    "Login with",
+                    style: GoogleFonts.readexPro(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 26.0,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  const CustomTextField(
+                    labelText: 'Email Address',
+                    obscureText: false,
+                  ),
+                  const SizedBox(
+                    height: 16.0,
+                  ),
+                  const CustomTextField(
+                    labelText: 'Password',
+                    obscureText: true,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Positioned(
+            top: MediaQuery.of(context).size.height * 0.145,
+            left: 0,
+            right: 0,
+            child: CircleAvatar(
+              backgroundColor: AppColors.whiteColor,
+              radius: 60.0,
+              child: Image.asset(
+                "images/Planet.png",
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
