@@ -27,52 +27,57 @@ class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     final FocusNode focusNode = FocusNode();
+
+    InputBorder borderStyle() {
+      return OutlineInputBorder(
+        borderSide: const BorderSide(
+          width: 0,
+          color: AppColors.textFieldBGColor,
+        ),
+        borderRadius: BorderRadius.circular(10.0),
+      );
+    }
+
+    InputDecoration textFieldDecoration = InputDecoration(
+      label: Text(widget.labelText),
+      labelStyle: GoogleFonts.readexPro(
+        fontWeight: FontWeight.w400,
+        color: AppColors.labelTextColor,
+      ),
+      focusedBorder: borderStyle(),
+      enabledBorder: borderStyle(),
+      filled: true,
+      fillColor: AppColors.textFieldBGColor,
+      suffixIcon: widget.isPasswordField
+          ? Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: IconButton(
+                onPressed: () {
+                  setState(
+                    () {
+                      _passwordVisible = !_passwordVisible;
+                    },
+                  );
+                },
+                icon: Icon(
+                  _passwordVisible
+                      ? Icons.visibility_outlined
+                      : Icons.visibility_off_outlined,
+                  size: 24.0,
+                  color: AppColors.visibilityIconColor,
+                ),
+              ),
+            )
+          : null,
+    );
+
     return TextField(
       focusNode: focusNode,
       obscureText: _passwordVisible,
       obscuringCharacter: '●',
       cursorColor: AppColors.labelTextColor,
       onTapOutside: (_) => focusNode.unfocus(),
-      decoration: InputDecoration(
-        label: Text(widget.labelText),
-        labelStyle: GoogleFonts.readexPro(
-          fontWeight: FontWeight.w400,
-          color: AppColors.labelTextColor,
-        ),
-        focusedBorder: borderStyle(),
-        enabledBorder: borderStyle(),
-        filled: true,
-        fillColor: AppColors.textFieldBGColor,
-        suffixIcon: widget.isPasswordField
-            ? Padding(
-                padding: const EdgeInsets.only(right: 8.0),
-                child: IconButton(
-                  onPressed: () {
-                    setState(() {
-                      _passwordVisible = !_passwordVisible;
-                    });
-                  },
-                  icon: Icon(
-                    _passwordVisible
-                        ? Icons.visibility_outlined
-                        : Icons.visibility_off_outlined,
-                    size: 24.0,
-                    color: AppColors.visibilityIconColor,
-                  ),
-                ),
-              )
-            : null,
-      ),
+      decoration: textFieldDecoration,
     );
   }
-}
-
-InputBorder borderStyle() {
-  return OutlineInputBorder(
-    borderSide: const BorderSide(
-      width: 0,
-      color: AppColors.textFieldBGColor,
-    ),
-    borderRadius: BorderRadius.circular(10.0),
-  );
 }
