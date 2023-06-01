@@ -6,4 +6,8 @@ class AppColors {
   /*TextField Colors*/
   static const labelTextColor = Color.fromARGB(255, 63, 63, 63);
   static const textFieldBGColor = Color.fromARGB(255, 246, 248, 252);
+  static const visibilityIconColor = Color(0xFFB4B4B4);
+
+  /* Button Colors */
+  static const loginButtonBGColor = Color(0xFFFC8019);
 }
