@@ -28,15 +28,13 @@ class _CustomTextFieldState extends State<CustomTextField> {
   Widget build(BuildContext context) {
     final FocusNode focusNode = FocusNode();
 
-    InputBorder borderStyle() {
-      return OutlineInputBorder(
-        borderSide: const BorderSide(
-          width: 0,
-          color: AppColors.textFieldBGColor,
-        ),
-        borderRadius: BorderRadius.circular(10.0),
-      );
-    }
+    InputBorder borderStyle = OutlineInputBorder(
+      borderSide: const BorderSide(
+        width: 0,
+        color: AppColors.textFieldBGColor,
+      ),
+      borderRadius: BorderRadius.circular(10.0),
+    );
 
     InputDecoration textFieldDecoration = InputDecoration(
       label: Text(widget.labelText),
@@ -44,8 +42,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
         fontWeight: FontWeight.w400,
         color: AppColors.labelTextColor,
       ),
-      focusedBorder: borderStyle(),
-      enabledBorder: borderStyle(),
+      focusedBorder: borderStyle,
+      enabledBorder: borderStyle,
       filled: true,
       fillColor: AppColors.textFieldBGColor,
       suffixIcon: widget.isPasswordField

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kraftbase/resources/app_colors.dart';
+import 'package:kraftbase/screens/signup_screen.dart';
 import 'package:kraftbase/widgets/custom_text_field.dart';
 import 'package:kraftbase/widgets/log_in_sign_up_widget.dart';
 
@@ -118,7 +119,15 @@ class LoginModal extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const SignUpScreen();
+                          },
+                        ),
+                      );
+                    },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
                     ),
