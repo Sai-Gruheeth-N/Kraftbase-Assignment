@@ -59,8 +59,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 },
                 icon: Icon(
                   _passwordVisible
-                      ? Icons.visibility_outlined
-                      : Icons.visibility_off_outlined,
+                      ? Icons.visibility_off_outlined
+                      : Icons.visibility_outlined,
                   size: 24.0,
                   color: AppColors.visibilityIconColor,
                 ),
@@ -71,7 +71,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
     return TextField(
       focusNode: focusNode,
-      obscureText: _passwordVisible,
+      obscureText: !_passwordVisible,
       obscuringCharacter: '●',
       cursorColor: AppColors.labelTextColor,
       onTap: () =>
