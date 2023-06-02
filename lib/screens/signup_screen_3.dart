@@ -178,12 +178,13 @@ class _SignUpModalStep3State extends State<SignUpModalStep3> {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.of(context).push(
+                      Navigator.of(context).pushAndRemoveUntil(
                         MaterialPageRoute(
                           builder: (context) {
                             return const LoginScreen();
                           },
                         ),
+                        (route) => false,
                       );
                     },
                     style: TextButton.styleFrom(

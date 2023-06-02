@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "217243997013",
+    "project_id": "kraftbase-auth",
+    "storage_bucket": "kraftbase-auth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217243997013:android:cc812c1013f831945495dc",
+        "android_client_info": {
+          "package_name": "com.example.kraftbase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217243997013-b0blavrdjm4qp5fu1cm7btl3bbiob7ke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsjNSkoffFFOp-ZTvHL9nEhk3m7h-eXAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217243997013-b0blavrdjm4qp5fu1cm7btl3bbiob7ke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
