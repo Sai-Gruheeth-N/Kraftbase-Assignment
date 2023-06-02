@@ -109,7 +109,6 @@ class LoginModal extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                // crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
                     "Don't have an account?",
