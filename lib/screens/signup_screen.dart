@@ -110,7 +110,13 @@ class _SignUpModalState extends State<SignUpModal> {
                   ? Text(
                       DateFormat('d MMMM, yyyy').format(_dateTime),
                     )
-                  : const Text('DOB'),
+                  : Text(
+                      'DOB',
+                      style: GoogleFonts.readexPro(
+                        fontWeight: FontWeight.w400,
+                        color: AppColors.labelTextColor,
+                      ),
+                    ),
               Container(
                 height: 20,
                 width: 20,
@@ -190,6 +196,37 @@ class _SignUpModalState extends State<SignUpModal> {
                 height: 8.0,
               ),
               dobWidget(),
+              const SizedBox(height: 32),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                width: double.infinity,
+                height: 52,
+                child: TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    backgroundColor: AppColors.loginButtonBGColor,
+                  ),
+                  child: Text(
+                    'Next',
+                    style: GoogleFonts.readexPro(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16.0,
+                      color: AppColors.whiteColor,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 12),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 14.0),
+                child: Text(
+                  "Having a trouble, we'll support you",
+                  style: GoogleFonts.readexPro(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 14.0,
+                  ),
+                ),
+              ),
             ],
           ),
         ),
