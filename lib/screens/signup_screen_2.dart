@@ -4,6 +4,7 @@ import 'package:kraftbase/resources/app_colors.dart';
 import 'package:kraftbase/screens/signup_screen_3.dart';
 import 'package:kraftbase/widgets/custom_text_field.dart';
 import 'package:kraftbase/widgets/log_in_sign_up_widget.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 class SignUpScreenStep2 extends StatelessWidget {
   const SignUpScreenStep2({super.key});
@@ -94,11 +95,22 @@ class _SignUpModalStep2State extends State<SignUpModalStep2> {
                 ),
               ),
               const SizedBox(
-                height: 3.0,
+                height: 4.0,
               ),
               const Text("Step 2 of 3"),
               const SizedBox(
-                height: 24.0,
+                height: 8.0,
+              ),
+              const StepProgressIndicator(
+                totalSteps: 3,
+                currentStep: 2,
+                selectedColor: Color.fromARGB(255, 60, 199, 66),
+                unselectedColor: Color.fromARGB(255, 217, 217, 217),
+                padding: 0,
+                size: 2,
+              ),
+              const SizedBox(
+                height: 16.0,
               ),
               const CustomTextField(
                 labelText: 'School Name',
