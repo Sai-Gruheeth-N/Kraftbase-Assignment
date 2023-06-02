@@ -76,6 +76,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
       cursorColor: AppColors.labelTextColor,
       onTap: () =>
           focusNode.hasFocus ? focusNode.unfocus() : focusNode.requestFocus(),
+      onTapOutside: (_) => focusNode.unfocus(),
       decoration: textFieldDecoration,
     );
   }

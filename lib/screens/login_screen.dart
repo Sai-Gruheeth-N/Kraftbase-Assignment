@@ -123,7 +123,7 @@ class LoginModal extends StatelessWidget {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (context) {
-                            return const SignUpScreen();
+                            return const SignUpScreenStep1();
                           },
                         ),
                       );

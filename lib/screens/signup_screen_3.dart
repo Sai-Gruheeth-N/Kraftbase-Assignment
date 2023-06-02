@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kraftbase/resources/app_colors.dart';
-import 'package:kraftbase/screens/signup_screen_2.dart';
 import 'package:kraftbase/widgets/custom_text_field.dart';
 import 'package:kraftbase/widgets/log_in_sign_up_widget.dart';
-import 'package:intl/intl.dart';
 
-class SignUpScreenStep1 extends StatelessWidget {
-  const SignUpScreenStep1({super.key});
+class SignUpScreenStep3 extends StatelessWidget {
+  const SignUpScreenStep3({super.key});
 
   @override
   Widget build(BuildContext context) {
     return LogInSignUpWidget(
       child: Stack(
         children: [
-          const SignUpModalStep1(),
+          const SignUpModalStep3(),
           Positioned(
             top: MediaQuery.of(context).size.height * 0.145,
             left: 0,
@@ -33,26 +31,16 @@ class SignUpScreenStep1 extends StatelessWidget {
   }
 }
 
-class SignUpModalStep1 extends StatefulWidget {
-  const SignUpModalStep1({
+class SignUpModalStep3 extends StatefulWidget {
+  const SignUpModalStep3({
     super.key,
   });
 
   @override
-  State<SignUpModalStep1> createState() => _SignUpModalStep1State();
+  State<SignUpModalStep3> createState() => _SignUpModalStep3State();
 }
 
-class _SignUpModalStep1State extends State<SignUpModalStep1> {
-  bool _isDateSelected = false;
-  List<String> genderList = ["Male", "Female", "Prefer not to say"];
-  List<String> classList = [
-    "Classes 8th STD",
-    "Classes 9th STD",
-    "Classes 10th STD",
-  ];
-
-  DateTime _dateTime = DateTime.now();
-
+class _SignUpModalStep3State extends State<SignUpModalStep3> {
   @override
   Widget build(BuildContext context) {
     InputBorder borderStyle = OutlineInputBorder(
@@ -74,80 +62,6 @@ class _SignUpModalStep1State extends State<SignUpModalStep1> {
         enabledBorder: borderStyle,
         filled: true,
         fillColor: AppColors.textFieldBGColor,
-      );
-    }
-
-    void _showDatePicker() {
-      setState(() {
-        _isDateSelected = true;
-      });
-      showDatePicker(
-        context: context,
-        initialDate: DateTime.now(),
-        firstDate: DateTime(1990),
-        lastDate: DateTime(2050),
-      ).then((value) {
-        setState(() {
-          _dateTime = value ?? _dateTime;
-        });
-      });
-    }
-
-    Widget dobWidget() {
-      return Container(
-        width: double.infinity,
-        height: 60,
-        decoration: BoxDecoration(
-          color: AppColors.textFieldBGColor,
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-        child: InputDecorator(
-          decoration:
-              _isDateSelected ? inputDecoration('DOB') : inputDecoration(''),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              _isDateSelected
-                  ? Text(
-                      DateFormat('d MMMM, yyyy').format(_dateTime),
-                    )
-                  : Text(
-                      'DOB',
-                      style: GoogleFonts.readexPro(
-                        fontWeight: FontWeight.w400,
-                        color: AppColors.labelTextColor,
-                      ),
-                    ),
-              Container(
-                height: 20,
-                width: 20,
-                margin: const EdgeInsets.only(right: 4.0),
-                child: GestureDetector(
-                  onTap: _showDatePicker,
-                  child: const Icon(
-                    Icons.keyboard_arrow_down,
-                    size: 23,
-                    color: AppColors.labelTextColor,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      );
-    }
-
-    Widget dropdownButtonFormField(String labelText, List<String> list) {
-      return DropdownButtonFormField(
-        decoration: inputDecoration(labelText),
-        icon: const Icon(Icons.keyboard_arrow_down),
-        items: list.map<DropdownMenuItem<String>>((String val) {
-          return DropdownMenuItem<String>(
-            value: val,
-            child: Text(val),
-          );
-        }).toList(),
-        onChanged: (_) {},
       );
     }
 
@@ -181,27 +95,22 @@ class _SignUpModalStep1State extends State<SignUpModalStep1> {
               const SizedBox(
                 height: 3.0,
               ),
-              const Text("Step 1 of 3"),
+              const Text("Step 2 of 3"),
               const SizedBox(
                 height: 24.0,
               ),
               const CustomTextField(
-                labelText: 'Username',
+                labelText: 'School Name',
                 isPasswordField: false,
               ),
               const SizedBox(
                 height: 8.0,
               ),
-              dropdownButtonFormField('Gender', genderList),
-              const SizedBox(
-                height: 8.0,
+              const CustomTextField(
+                labelText: 'Location',
+                isPasswordField: false,
               ),
-              dropdownButtonFormField('Class', classList),
-              const SizedBox(
-                height: 8.0,
-              ),
-              dobWidget(),
-              const SizedBox(height: 32),
+              const SizedBox(height: 164),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 4.0),
                 width: double.infinity,
@@ -211,7 +120,7 @@ class _SignUpModalStep1State extends State<SignUpModalStep1> {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) {
-                          return const SignUpScreenStep2();
+                          return const Placeholder();
                         },
                       ),
                     );
