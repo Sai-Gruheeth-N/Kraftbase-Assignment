@@ -1,27 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kraftbase/resources/app_colors.dart';
-import 'package:kraftbase/screens/login_screen.dart';
+import 'package:kraftbase/screens/login-signup/signup_screen_1.dart';
 import 'package:kraftbase/widgets/custom_text_field.dart';
 import 'package:kraftbase/widgets/log_in_sign_up_bg.dart';
-import 'package:step_progress_indicator/step_progress_indicator.dart';
 
-class SignUpScreenStep3 extends StatelessWidget {
-  const SignUpScreenStep3({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const LogInSignUpBG(
-      child: SignUpModalStep3(),
-    );
+    return const LogInSignUpBG(child: LoginModal());
   }
 }
 
-class SignUpModalStep3 extends StatelessWidget {
-  const SignUpModalStep3({
+class LoginModal extends StatelessWidget {
+  const LoginModal({
     super.key,
   });
 
+  // String email;
+  // String password;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -37,7 +36,6 @@ class SignUpModalStep3 extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12.0),
-        // child: SingleChildScrollView(
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -45,68 +43,38 @@ class SignUpModalStep3 extends StatelessWidget {
                 height: 12.0,
               ),
               Text(
-                "Signup with",
+                "Login with",
                 style: GoogleFonts.readexPro(
                   fontWeight: FontWeight.w600,
                   fontSize: 26.0,
                 ),
               ),
               const SizedBox(
-                height: 3.0,
-              ),
-              const Text("Step 3 of 3"),
-              const SizedBox(
-                height: 8.0,
-              ),
-              const StepProgressIndicator(
-                totalSteps: 3,
-                currentStep: 3,
-                selectedColor: Color.fromARGB(255, 60, 199, 66),
-                unselectedColor: Color.fromARGB(255, 217, 217, 217),
-                padding: 0,
-                size: 2,
-              ),
-              const SizedBox(
-                height: 16.0,
+                height: 20.0,
               ),
               const CustomTextField(
                 labelText: 'Email Address',
                 isPasswordField: false,
               ),
               const SizedBox(
-                height: 8.0,
-              ),
-              const CustomTextField(
-                labelText: 'Phone Number',
-                isPasswordField: false,
-              ),
-              const SizedBox(
-                height: 8.0,
+                height: 16.0,
               ),
               const CustomTextField(
                 labelText: 'Password',
                 isPasswordField: true,
               ),
-              const SizedBox(height: 36),
+              const SizedBox(height: 32),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 4.0),
                 width: double.infinity,
                 height: 52,
                 child: TextButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return const Placeholder();
-                        },
-                      ),
-                    );
-                  },
+                  onPressed: () {},
                   style: TextButton.styleFrom(
                     backgroundColor: AppColors.loginButtonBGColor,
                   ),
                   child: Text(
-                    'Next',
+                    'Login',
                     style: GoogleFonts.readexPro(
                       fontWeight: FontWeight.w600,
                       fontSize: 16.0,
@@ -127,7 +95,7 @@ class SignUpModalStep3 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Already have an account?",
+                    "Don't have an account?",
                     style: GoogleFonts.readexPro(
                       fontWeight: FontWeight.w300,
                       fontSize: 12.0,
@@ -135,20 +103,19 @@ class SignUpModalStep3 extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.of(context).pushAndRemoveUntil(
+                      Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (context) {
-                            return const LoginScreen();
+                            return const SignUpScreenStep1();
                           },
                         ),
-                        (route) => false,
                       );
                     },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
                     ),
                     child: Text(
-                      "Login",
+                      "Sign Up",
                       style: GoogleFonts.readexPro(
                         fontWeight: FontWeight.w600,
                         fontSize: 12.0,
@@ -161,7 +128,6 @@ class SignUpModalStep3 extends StatelessWidget {
             ],
           ),
         ),
-        // ),
       ),
     );
   }
