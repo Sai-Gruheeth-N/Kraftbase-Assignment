@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kraftbase/screens/home/home.dart';
 import 'package:kraftbase/screens/login-signup/login_screen.dart';
-import 'package:kraftbase/screens/home/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -78,7 +78,7 @@ class HomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return const HomeScreen();
+                        return const Home();
                       },
                     ),
                   );
