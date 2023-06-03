@@ -36,9 +36,57 @@ class Feed extends StatelessWidget {
             ),
           ),
         ),
+        Positioned(
+          top: 16,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Row(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFFC8019),
+                    borderRadius: BorderRadius.circular(24.0),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 4.0, horizontal: 8.0),
+                    child: Text(
+                      'Daily Posts',
+                      style: GoogleFonts.readexPro(
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 8.0),
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color(0xFF979797),
+                    ),
+                    borderRadius: BorderRadius.circular(24.0),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 4.0,
+                      horizontal: 8.0,
+                    ),
+                    child: Text(
+                      'Discussion & Polling',
+                      style: GoogleFonts.readexPro(
+                        color: const Color(0xFF939393),
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
         Container(
           height: MediaQuery.of(context).size.height,
-          padding: const EdgeInsets.symmetric(vertical: 60),
+          padding: const EdgeInsets.only(top: 60, left: 16, right: 16),
           child: ListView.builder(
             itemCount: 10,
             itemBuilder: (context, index) {
