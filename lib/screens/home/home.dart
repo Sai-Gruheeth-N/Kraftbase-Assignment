@@ -44,55 +44,81 @@ class _HomeState extends State<Home> {
         items: [
           BottomNavigationBarItem(
             icon: ColorFiltered(
-              colorFilter: const ColorFilter.mode(
-                Color(0xFFFC8019),
-                BlendMode.srcIn,
-              ),
+              colorFilter: _selectedIndex == 0
+                  ? const ColorFilter.mode(
+                      Color(0xFFFC8019),
+                      BlendMode.srcIn,
+                    )
+                  : const ColorFilter.mode(
+                      Color(0xFF979797),
+                      BlendMode.srcIn,
+                    ),
               child: Image.asset('images/bottomNavBarIcons/home.png'),
             ),
             label: "Home",
           ),
           BottomNavigationBarItem(
             icon: ColorFiltered(
-              colorFilter: const ColorFilter.mode(
-                Color(0xFFFC8019),
-                BlendMode.srcIn,
-              ),
+              colorFilter: _selectedIndex == 1
+                  ? const ColorFilter.mode(
+                      Color(0xFFFC8019),
+                      BlendMode.srcIn,
+                    )
+                  : const ColorFilter.mode(
+                      Color(0xFF979797),
+                      BlendMode.srcIn,
+                    ),
               child: Image.asset('images/bottomNavBarIcons/chat.png'),
             ),
             label: "Chat",
           ),
           BottomNavigationBarItem(
             icon: ColorFiltered(
-              colorFilter: const ColorFilter.mode(
-                Color(0xFFFC8019),
-                BlendMode.srcIn,
-              ),
+              colorFilter: _selectedIndex == 2
+                  ? const ColorFilter.mode(
+                      Color(0xFFFC8019),
+                      BlendMode.srcIn,
+                    )
+                  : const ColorFilter.mode(
+                      Color(0xFF979797),
+                      BlendMode.srcIn,
+                    ),
               child: Image.asset('images/bottomNavBarIcons/ai.png'),
             ),
             label: "AI",
           ),
           BottomNavigationBarItem(
             icon: ColorFiltered(
-              colorFilter: const ColorFilter.mode(
-                Color(0xFFFC8019),
-                BlendMode.srcIn,
-              ),
+              colorFilter: _selectedIndex == 3
+                  ? const ColorFilter.mode(
+                      Color(0xFFFC8019),
+                      BlendMode.srcIn,
+                    )
+                  : const ColorFilter.mode(
+                      Color(0xFF979797),
+                      BlendMode.srcIn,
+                    ),
               child: Image.asset('images/bottomNavBarIcons/learn.png'),
             ),
             label: "Learn",
           ),
           BottomNavigationBarItem(
             icon: ColorFiltered(
-              colorFilter: const ColorFilter.mode(
-                Color(0xFFFC8019),
-                BlendMode.srcIn,
-              ),
+              colorFilter: _selectedIndex == 4
+                  ? const ColorFilter.mode(
+                      Color(0xFFFC8019),
+                      BlendMode.srcIn,
+                    )
+                  : const ColorFilter.mode(
+                      Color(0xFF979797),
+                      BlendMode.srcIn,
+                    ),
               child: Image.asset('images/bottomNavBarIcons/events.png'),
             ),
             label: "Events",
           ),
         ],
+        currentIndex: _selectedIndex,
         selectedItemColor: const Color(0xFFFC8019),
         unselectedItemColor: const Color(0xFF979797),
         showUnselectedLabels: true,
