@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
     return ListView(
       children: const [
         Stories(),
-        SizedBox(height: 20),
+        SizedBox(height: 8),
         Feed(),
       ],
     );

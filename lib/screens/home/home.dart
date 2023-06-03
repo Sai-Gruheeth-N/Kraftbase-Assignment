@@ -40,6 +40,15 @@ class _HomeState extends State<Home> {
       backgroundColor: AppColors.whiteColor,
       appBar: const HomeScreenAppbar(),
       body: pages[_selectedIndex],
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Color(0xFFFC8019),
+        shape: const CircleBorder(),
+        child: const Icon(
+          Icons.add,
+          color: AppColors.whiteColor,
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
