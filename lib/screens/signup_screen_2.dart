@@ -45,28 +45,6 @@ class SignUpModalStep2 extends StatefulWidget {
 class _SignUpModalStep2State extends State<SignUpModalStep2> {
   @override
   Widget build(BuildContext context) {
-    InputBorder borderStyle = OutlineInputBorder(
-      borderSide: const BorderSide(
-        width: 0,
-        color: AppColors.textFieldBGColor,
-      ),
-      borderRadius: BorderRadius.circular(10.0),
-    );
-
-    InputDecoration inputDecoration(String labelText) {
-      return InputDecoration(
-        label: Text(labelText),
-        labelStyle: GoogleFonts.readexPro(
-          fontWeight: FontWeight.w400,
-          color: AppColors.labelTextColor,
-        ),
-        focusedBorder: borderStyle,
-        enabledBorder: borderStyle,
-        filled: true,
-        fillColor: AppColors.textFieldBGColor,
-      );
-    }
-
     return Container(
       margin: const EdgeInsets.only(
         top: 176.0,

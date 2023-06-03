@@ -78,6 +78,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           focusNode.hasFocus ? focusNode.unfocus() : focusNode.requestFocus(),
       onTapOutside: (_) => focusNode.unfocus(),
       decoration: textFieldDecoration,
+      onChanged: (newVal) {},
     );
   }
 }
