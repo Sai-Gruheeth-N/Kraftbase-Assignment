@@ -14,4 +14,7 @@ class AppColors {
   /* Progress Indicator Colors */
   static const filledColor = Color.fromARGB(255, 60, 199, 66);
   static const unFilledColor = Color.fromARGB(255, 217, 217, 217);
+
+  /* HomeScreen */
+  static const homeScreenBGColor = Color(0xFFF5F5F5);
 }

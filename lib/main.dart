@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kraftbase/screens/login-signup/login_screen.dart';
+import 'package:kraftbase/screens/home/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -72,7 +73,16 @@ class HomePage extends StatelessWidget {
                   Icons.keyboard_arrow_right_rounded,
                   color: Colors.white,
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const HomeScreen();
+                      },
+                    ),
+                  );
+                },
                 splashColor: Colors.transparent,
               ),
               ListTile(
