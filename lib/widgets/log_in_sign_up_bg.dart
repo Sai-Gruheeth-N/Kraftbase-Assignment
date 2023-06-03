@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kraftbase/resources/app_colors.dart';
 
 class LogInSignUpBG extends StatelessWidget {
   final Widget child;
@@ -26,7 +27,23 @@ class LogInSignUpBG extends StatelessWidget {
               ],
             ),
           ),
-          child: child,
+          child: Stack(
+            children: [
+              child,
+              Positioned(
+                top: MediaQuery.of(context).size.height * 0.145,
+                left: 0,
+                right: 0,
+                child: CircleAvatar(
+                  backgroundColor: AppColors.whiteColor,
+                  radius: 60.0,
+                  child: Image.asset(
+                    "images/Planet.png",
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

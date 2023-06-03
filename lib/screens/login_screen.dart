@@ -10,25 +10,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LogInSignUpBG(
-      child: Stack(
-        children: [
-          const LoginModal(),
-          Positioned(
-            top: MediaQuery.of(context).size.height * 0.145,
-            left: 0,
-            right: 0,
-            child: CircleAvatar(
-              backgroundColor: AppColors.whiteColor,
-              radius: 60.0,
-              child: Image.asset(
-                "images/Planet.png",
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
+    return const LogInSignUpBG(child: LoginModal());
   }
 }
 
@@ -37,6 +19,8 @@ class LoginModal extends StatelessWidget {
     super.key,
   });
 
+  // String email;
+  // String password;
   @override
   Widget build(BuildContext context) {
     return Container(

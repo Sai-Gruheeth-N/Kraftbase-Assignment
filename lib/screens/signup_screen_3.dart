@@ -11,38 +11,17 @@ class SignUpScreenStep3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LogInSignUpBG(
-      child: Stack(
-        children: [
-          const SignUpModalStep3(),
-          Positioned(
-            top: MediaQuery.of(context).size.height * 0.145,
-            left: 0,
-            right: 0,
-            child: CircleAvatar(
-              backgroundColor: AppColors.whiteColor,
-              radius: 60.0,
-              child: Image.asset(
-                "images/Planet.png",
-              ),
-            ),
-          ),
-        ],
-      ),
+    return const LogInSignUpBG(
+      child: SignUpModalStep3(),
     );
   }
 }
 
-class SignUpModalStep3 extends StatefulWidget {
+class SignUpModalStep3 extends StatelessWidget {
   const SignUpModalStep3({
     super.key,
   });
 
-  @override
-  State<SignUpModalStep3> createState() => _SignUpModalStep3State();
-}
-
-class _SignUpModalStep3State extends State<SignUpModalStep3> {
   @override
   Widget build(BuildContext context) {
     return Container(

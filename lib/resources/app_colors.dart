@@ -10,4 +10,8 @@ class AppColors {
 
   /* Button Colors */
   static const loginButtonBGColor = Color(0xFFFC8019);
+
+  /* Progress Indicator Colors */
+  static const filledColor = Color.fromARGB(255, 60, 199, 66);
+  static const unFilledColor = Color.fromARGB(255, 217, 217, 217);
 }

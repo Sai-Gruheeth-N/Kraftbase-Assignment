@@ -12,24 +12,8 @@ class SignUpScreenStep1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LogInSignUpBG(
-      child: Stack(
-        children: [
-          const SignUpModalStep1(),
-          Positioned(
-            top: MediaQuery.of(context).size.height * 0.145,
-            left: 0,
-            right: 0,
-            child: CircleAvatar(
-              backgroundColor: AppColors.whiteColor,
-              radius: 60.0,
-              child: Image.asset(
-                "images/Planet.png",
-              ),
-            ),
-          ),
-        ],
-      ),
+    return const LogInSignUpBG(
+      child: SignUpModalStep1(),
     );
   }
 }
@@ -189,8 +173,8 @@ class _SignUpModalStep1State extends State<SignUpModalStep1> {
               const StepProgressIndicator(
                 totalSteps: 3,
                 currentStep: 1,
-                selectedColor: Color.fromARGB(255, 60, 199, 66),
-                unselectedColor: Color.fromARGB(255, 217, 217, 217),
+                selectedColor: AppColors.filledColor,
+                unselectedColor: AppColors.unFilledColor,
                 padding: 0,
                 size: 2,
               ),
