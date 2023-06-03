@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kraftbase/screens/login_screen.dart';
+import 'package:kraftbase/screens/login-signup/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
