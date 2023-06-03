@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kraftbase/resources/app_colors.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -88,13 +89,105 @@ class Feed extends StatelessWidget {
           height: MediaQuery.of(context).size.height,
           padding: const EdgeInsets.only(top: 60, left: 16, right: 16),
           child: ListView.builder(
-            itemCount: 10,
+            physics: const AlwaysScrollableScrollPhysics(),
+            itemCount: 5,
             itemBuilder: (context, index) {
               return Container(
                 padding: const EdgeInsets.only(bottom: 20),
-                height: 316,
-                width: 320,
-                child: const Card(),
+                child: Card(
+                  color: AppColors.whiteColor,
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          top: 4.0,
+                          left: 8.0,
+                          right: 8.0,
+                        ),
+                        child: Row(
+                          children: [
+                            CircleAvatar(
+                              radius: 18,
+                              child: Image.asset('images/feedDP.png'),
+                            ),
+                            const SizedBox(width: 8.0),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Jenny Wilson",
+                                  style: GoogleFonts.readexPro(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 14.0,
+                                    color: const Color(0xFF232323),
+                                  ),
+                                ),
+                                Text(
+                                  "10 Mins Ago",
+                                  style: GoogleFonts.readexPro(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 8.0,
+                                    color: const Color(0xFFBEBEBE),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const Spacer(),
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.more_horiz),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 8.0),
+                      Image.asset(
+                        'images/feedImage.png',
+                        fit: BoxFit.fitWidth,
+                        width: double.infinity,
+                      ),
+                      Row(
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: Image.asset(
+                              'images/feedActionIcons/love.png',
+                            ),
+                            padding: EdgeInsets.zero,
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Image.asset(
+                              'images/feedActionIcons/messenger.png',
+                            ),
+                            padding: EdgeInsets.zero,
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Image.asset(
+                              'images/feedActionIcons/arrow.png',
+                            ),
+                            padding: EdgeInsets.zero,
+                          ),
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          left: 8.0,
+                          right: 8.0,
+                          bottom: 12.0,
+                        ),
+                        child: Text(
+                          'Lorem ipsum dolor sit amet consectetur. In proin scelerisque rhoncus magna odio tellus habitant eleifend. Justo risus eget pretium turpis tincidunt sagittis id nulla. ',
+                          style: GoogleFonts.readexPro(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 10.0,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               );
             },
           ),
