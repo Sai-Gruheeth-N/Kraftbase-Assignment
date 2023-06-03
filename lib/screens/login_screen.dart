@@ -3,14 +3,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:kraftbase/resources/app_colors.dart';
 import 'package:kraftbase/screens/signup_screen_1.dart';
 import 'package:kraftbase/widgets/custom_text_field.dart';
-import 'package:kraftbase/widgets/log_in_sign_up_widget.dart';
+import 'package:kraftbase/widgets/log_in_sign_up_bg.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return LogInSignUpWidget(
+    return LogInSignUpBG(
       child: Stack(
         children: [
           const LoginModal(),

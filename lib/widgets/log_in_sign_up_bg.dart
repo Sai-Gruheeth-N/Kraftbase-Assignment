@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class LogInSignUpWidget extends StatelessWidget {
+class LogInSignUpBG extends StatelessWidget {
   final Widget child;
-  const LogInSignUpWidget({
+  const LogInSignUpBG({
     Key? key,
     required this.child,
   }) : super(key: key);

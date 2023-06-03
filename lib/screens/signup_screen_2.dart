@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:kraftbase/resources/app_colors.dart';
 import 'package:kraftbase/screens/signup_screen_3.dart';
 import 'package:kraftbase/widgets/custom_text_field.dart';
-import 'package:kraftbase/widgets/log_in_sign_up_widget.dart';
+import 'package:kraftbase/widgets/log_in_sign_up_bg.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 class SignUpScreenStep2 extends StatelessWidget {
@@ -11,7 +11,7 @@ class SignUpScreenStep2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LogInSignUpWidget(
+    return LogInSignUpBG(
       child: Stack(
         children: [
           const SignUpModalStep2(),
