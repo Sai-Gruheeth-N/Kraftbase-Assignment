@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:kraftbase/resources/app_colors.dart';
 import 'package:kraftbase/screens/events/recent_tab_view.dart';
 import 'package:kraftbase/screens/events/today_tab_view.dart';
+import 'package:kraftbase/screens/events/upcoming_tab_view.dart';
 import 'package:kraftbase/widgets/custom_icon_button.dart';
 
 class EventScreen extends StatelessWidget {
@@ -25,8 +26,9 @@ class EventScreen extends StatelessWidget {
               padding: EdgeInsets.only(top: 12.0),
               child: TodayTabView(),
             ),
-            Center(
-              child: Text('Upcoming'),
+            Padding(
+              padding: EdgeInsets.only(top: 12.0),
+              child: UpcomingTabView(),
             ),
           ],
         ),
