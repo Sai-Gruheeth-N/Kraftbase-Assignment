@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kraftbase/resources/app_colors.dart';
+import 'package:kraftbase/screens/events/event_screen.dart';
 import 'package:kraftbase/screens/home/home_screen.dart';
 
 class Home extends StatefulWidget {
@@ -29,9 +30,7 @@ class _HomeState extends State<Home> {
     Center(
       child: Text("LearnScreen"),
     ),
-    Center(
-      child: Text("EventsScreen"),
-    ),
+    EventScreen(),
   ];
 
   @override

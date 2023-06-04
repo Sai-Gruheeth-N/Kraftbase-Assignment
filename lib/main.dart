@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kraftbase/screens/home/home.dart';
+import 'package:kraftbase/home.dart';
 import 'package:kraftbase/screens/login-signup/login_screen.dart';
 
 void main() {
