@@ -7,6 +7,13 @@ class TodayTabView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Color> cardColor = const [
+      Color(0xFF4C42C2),
+      Color(0xFF42C2C2),
+      Color(0xFFC2429E),
+      Color(0xFF4C42C2),
+      Color(0xFF42C2C2),
+    ];
     return Stack(
       children: [
         Container(
@@ -90,9 +97,23 @@ class TodayTabView extends StatelessWidget {
             ),
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.only(top: 60.0, left: 8, right: 8),
+          child: ListView.builder(
+            itemCount: 4,
+            itemBuilder: (context, index) {
+              return Container(
+                margin: const EdgeInsets.only(bottom: 8),
+                height: 180,
+                width: 360,
+                child: Card(
+                  color: cardColor[index],
+                ),
+              );
+            },
+          ),
+        ),
       ],
     );
   }
 }
-
-

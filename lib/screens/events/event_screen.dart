@@ -16,12 +16,12 @@ class EventScreen extends StatelessWidget {
         appBar: EventScreenAppbar(),
         body: TabBarView(
           children: [
+            Center(
+              child: Text('Recent'),
+            ),
             Padding(
               padding: EdgeInsets.only(top: 12.0),
               child: TodayTabView(),
-            ),
-            Center(
-              child: Text('Today'),
             ),
             Center(
               child: Text('Upcoming'),
