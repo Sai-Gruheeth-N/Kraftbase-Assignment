@@ -17,6 +17,13 @@ class TodayTabView extends StatelessWidget {
       Color(0xFF42C2C2),
     ];
     List<int> enrollCount = [85, 62, 45, 92, 100];
+    List<String> title = [
+      "Cryptocurrency",
+      "Web 3 Technology",
+      "Big Data Analytics",
+      "Cryptocurrency",
+      "Web 3 Technology",
+    ];
     return Stack(
       children: [
         Container(
@@ -115,6 +122,7 @@ class TodayTabView extends StatelessWidget {
                 child: Card(
                   color: cardColor[index],
                   child: EventCard(
+                    eventTitle: title[index],
                     enrollCount: enrollCount[index],
                   ),
                 ),
@@ -128,9 +136,11 @@ class TodayTabView extends StatelessWidget {
 }
 
 class EventCard extends StatelessWidget {
+  final String eventTitle;
   final int enrollCount;
   const EventCard({
     Key? key,
+    required this.eventTitle,
     required this.enrollCount,
   }) : super(key: key);
 
@@ -146,7 +156,9 @@ class EventCard extends StatelessWidget {
                 height: 44,
                 width: 44,
                 decoration: const BoxDecoration(
-                  color: Colors.black,
+                  image: DecorationImage(
+                    image: AssetImage('images/eventCard/event.png'),
+                  ),
                   borderRadius: BorderRadius.all(
                     Radius.circular(8.0),
                   ),
@@ -158,7 +170,7 @@ class EventCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Cryptocurrency',
+                      eventTitle,
                       style: GoogleFonts.readexPro(
                         fontWeight: FontWeight.w600,
                         fontSize: 14,

@@ -67,6 +67,7 @@ flutter:
     - images/stories/
     - images/bottomNavBarIcons/
     - images/feedActionIcons/
+    - images/eventCard/
     - images/eventCard/participants/
 
   # An image asset can refer to one or more resolution-specific "variants", see
