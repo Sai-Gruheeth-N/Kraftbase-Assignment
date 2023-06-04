@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kraftbase/resources/app_colors.dart';
+import 'package:kraftbase/screens/events/today_tab_view.dart';
 import 'package:kraftbase/widgets/custom_icon_button.dart';
 
 class EventScreen extends StatelessWidget {
@@ -15,8 +16,9 @@ class EventScreen extends StatelessWidget {
         appBar: EventScreenAppbar(),
         body: TabBarView(
           children: [
-            Center(
-              child: Text('Recent'),
+            Padding(
+              padding: EdgeInsets.only(top: 12.0),
+              child: TodayTabView(),
             ),
             Center(
               child: Text('Today'),
