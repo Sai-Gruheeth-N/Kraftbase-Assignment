@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kraftbase/resources/app_colors.dart';
+import 'package:kraftbase/widgets/custom_icon_button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,6 +10,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: const [
+        HomeScreenAppbar(),
         Stories(),
         SizedBox(height: 8),
         Feed(),
@@ -274,4 +276,63 @@ class Stories extends StatelessWidget {
       ),
     );
   }
+}
+
+class HomeScreenAppbar extends StatelessWidget implements PreferredSizeWidget {
+  const HomeScreenAppbar({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      elevation: 0.0,
+      actions: [
+        Flexible(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(left: 16.0),
+                child: CustomIconButton(
+                  icon: Icon(Icons.more_vert),
+                ),
+              ),
+              const Text(
+                'Learning Community',
+                style: TextStyle(
+                  fontFamily: 'Grozel',
+                  color: Color.fromARGB(255, 252, 128, 25),
+                ),
+              ),
+              CustomIconButton(
+                icon: Image.asset('images/Search.png'),
+              ),
+              CustomIconButton(
+                icon: Image.asset('images/Notification.png'),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 16.0),
+                child: CircleAvatar(
+                  radius: 20,
+                  backgroundColor: const Color.fromARGB(255, 252, 128, 25),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset(
+                      'images/profile-pic.png',
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+      backgroundColor: AppColors.whiteColor,
+      automaticallyImplyLeading: false,
+    );
+  }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

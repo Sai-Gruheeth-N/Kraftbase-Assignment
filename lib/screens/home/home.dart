@@ -38,11 +38,11 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
-      appBar: const HomeScreenAppbar(),
+      // appBar: const HomeScreenAppbar(),
       body: pages[_selectedIndex],
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: Color(0xFFFC8019),
+        backgroundColor: const Color(0xFFFC8019),
         shape: const CircleBorder(),
         child: const Icon(
           Icons.add,
@@ -133,84 +133,6 @@ class _HomeState extends State<Home> {
         showUnselectedLabels: true,
         type: BottomNavigationBarType.fixed,
         onTap: _onItemTap,
-      ),
-    );
-  }
-}
-
-class HomeScreenAppbar extends StatelessWidget implements PreferredSizeWidget {
-  const HomeScreenAppbar({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return AppBar(
-      elevation: 0.0,
-      actions: [
-        Flexible(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Padding(
-                padding: EdgeInsets.only(left: 16.0),
-                child: CustomIconButton(
-                  icon: Icon(Icons.more_vert),
-                ),
-              ),
-              const Text(
-                'Learning Community',
-                style: TextStyle(
-                  fontFamily: 'Grozel',
-                  color: Color.fromARGB(255, 252, 128, 25),
-                ),
-              ),
-              CustomIconButton(
-                icon: Image.asset('images/Search.png'),
-              ),
-              CustomIconButton(
-                icon: Image.asset('images/Notification.png'),
-              ),
-              const Padding(
-                padding: EdgeInsets.only(right: 16.0),
-                child: CircleAvatar(
-                  radius: 20,
-                  backgroundColor: Color.fromARGB(255, 252, 128, 25),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-      backgroundColor: AppColors.whiteColor,
-      automaticallyImplyLeading: false,
-    );
-  }
-
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
-}
-
-class CustomIconButton extends StatelessWidget {
-  final Widget icon;
-  const CustomIconButton({
-    Key? key,
-    required this.icon,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 32,
-      width: 32,
-      decoration: const BoxDecoration(
-        color: AppColors.whiteColor,
-        shape: BoxShape.circle,
-      ),
-      child: IconButton(
-        onPressed: () {},
-        icon: icon,
-        padding: EdgeInsets.zero,
       ),
     );
   }
