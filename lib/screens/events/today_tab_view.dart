@@ -16,7 +16,7 @@ class TodayTabView extends StatelessWidget {
       Color(0xFF4C42C2),
       Color(0xFF42C2C2),
     ];
-    List<int> enrollCount = [85, 62, 45, 85, 62];
+    List<int> enrollCount = [85, 62, 45, 92, 100];
     return Stack(
       children: [
         Container(
@@ -106,7 +106,7 @@ class TodayTabView extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 60.0, left: 8, right: 8),
           child: ListView.builder(
-            itemCount: 4,
+            itemCount: 5,
             itemBuilder: (context, index) {
               return Container(
                 margin: const EdgeInsets.only(bottom: 8),
@@ -252,53 +252,52 @@ class EventCard extends StatelessWidget {
             ],
           ),
           const Divider(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SizedBox(
-                width: 200,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(50.0),
-                  child: LinearProgressIndicator(
-                    value: enrollCount / 100,
-                    minHeight: 5,
-                    backgroundColor: const Color(0xFFC8C8C8),
-                    color: AppColors.whiteColor,
+          Padding(
+            padding: const EdgeInsets.only(top: 4.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(
+                  width: 200,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(50.0),
+                    child: LinearProgressIndicator(
+                      value: enrollCount / 100,
+                      minHeight: 5,
+                      backgroundColor: const Color(0xFFC8C8C8),
+                      color: AppColors.whiteColor,
+                    ),
                   ),
                 ),
-              ),
-              Text(
-                '$enrollCount%',
-                style: GoogleFonts.readexPro(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 10.0,
-                    color: AppColors.whiteColor),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  color: const Color(0xFFFFD55D),
-                  borderRadius: BorderRadius.circular(14.0),
+                Text(
+                  '$enrollCount%',
+                  style: GoogleFonts.readexPro(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 10.0,
+                      color: AppColors.whiteColor),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 4.0,
-                    horizontal: 8.0,
+                Container(
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFFFD55D),
+                    borderRadius: BorderRadius.circular(14.0),
                   ),
-                  child: Row(
-                    children: [
-                      Text(
-                        'Enroll Now',
-                        style: GoogleFonts.readexPro(
-                          color: const Color(0xFF212121),
-                          fontWeight: FontWeight.w400,
-                          fontSize: 10.0,
-                        ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 4.0,
+                      horizontal: 8.0,
+                    ),
+                    child: Text(
+                      'Enroll Now',
+                      style: GoogleFonts.readexPro(
+                        color: const Color(0xFF212121),
+                        fontWeight: FontWeight.w400,
+                        fontSize: 10.0,
                       ),
-                    ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           )
         ],
       ),
