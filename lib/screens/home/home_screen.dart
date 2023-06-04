@@ -8,13 +8,24 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: const [
-        HomeScreenAppbar(),
-        Stories(),
-        SizedBox(height: 8),
-        Feed(),
-      ],
+    return Scaffold(
+      body: ListView(
+        children: const [
+          HomeScreenAppbar(),
+          Stories(),
+          SizedBox(height: 8),
+          Feed(),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: const Color(0xFFFC8019),
+        shape: const CircleBorder(),
+        child: const Icon(
+          Icons.add,
+          color: AppColors.whiteColor,
+        ),
+      ),
     );
   }
 }

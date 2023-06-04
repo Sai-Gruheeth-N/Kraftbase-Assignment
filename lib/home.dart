@@ -37,17 +37,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
-      // appBar: const HomeScreenAppbar(),
       body: pages[_selectedIndex],
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: const Color(0xFFFC8019),
-        shape: const CircleBorder(),
-        child: const Icon(
-          Icons.add,
-          color: AppColors.whiteColor,
-        ),
-      ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
