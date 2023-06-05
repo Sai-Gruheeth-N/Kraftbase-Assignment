@@ -85,18 +85,6 @@ class HomePage extends StatelessWidget {
                 },
                 splashColor: Colors.transparent,
               ),
-              ListTile(
-                title: const Text(
-                  "Event Screen",
-                  style: TextStyle(color: Colors.white),
-                ),
-                trailing: const Icon(
-                  Icons.keyboard_arrow_right_rounded,
-                  color: Colors.white,
-                ),
-                onTap: () {},
-                splashColor: Colors.transparent,
-              ),
             ],
           ),
         ),

@@ -4,7 +4,7 @@ class AppColors {
   static const whiteColor = Color.fromARGB(255, 255, 255, 255);
 
   /*TextField Colors*/
-  static const labelTextColor = Color.fromARGB(255, 63, 63, 63);
+  static const labelTextColor = Color(0xFF3F3F3F);
   static const textFieldBGColor = Color.fromARGB(255, 246, 248, 252);
   static const visibilityIconColor = Color(0xFFB4B4B4);
 

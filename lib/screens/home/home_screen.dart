@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kraftbase/resources/app_colors.dart';
+import 'package:kraftbase/screens/home/new_post_screen.dart';
 import 'package:kraftbase/widgets/custom_icon_button.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -18,7 +19,15 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) {
+                return const NewPostScreen();
+              },
+            ),
+          );
+        },
         backgroundColor: const Color(0xFFFC8019),
         shape: const CircleBorder(),
         child: const Icon(
@@ -121,7 +130,7 @@ class Feed extends StatelessWidget {
                           children: [
                             CircleAvatar(
                               radius: 18,
-                              child: Image.asset('images/feedDP.png'),
+                              child: Image.asset('images/postDP.png'),
                             ),
                             const SizedBox(width: 8.0),
                             Column(
@@ -155,7 +164,7 @@ class Feed extends StatelessWidget {
                       ),
                       const SizedBox(height: 8.0),
                       Image.asset(
-                        'images/feedImage.png',
+                        'images/postImage.png',
                         fit: BoxFit.fitWidth,
                         width: double.infinity,
                       ),
