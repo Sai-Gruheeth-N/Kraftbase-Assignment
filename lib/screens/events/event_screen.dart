@@ -49,10 +49,11 @@ class EventScreenAppbar extends StatelessWidget implements PreferredSizeWidget {
         Flexible(
           child: Row(
             children: [
-              const Padding(
-                padding: EdgeInsets.only(left: 16.0),
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0),
                 child: CustomIconButton(
-                  icon: Icon(Icons.more_vert),
+                  icon: const Icon(Icons.more_vert),
+                  onPressed: () {},
                 ),
               ),
               const SizedBox(width: 8.0),
@@ -66,6 +67,7 @@ class EventScreenAppbar extends StatelessWidget implements PreferredSizeWidget {
               const Spacer(),
               CustomIconButton(
                 icon: Image.asset('images/Notification.png'),
+                onPressed: () {},
               ),
               const SizedBox(width: 12.0),
               Padding(

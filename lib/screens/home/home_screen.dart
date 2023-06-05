@@ -312,10 +312,11 @@ class HomeScreenAppbar extends StatelessWidget implements PreferredSizeWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Padding(
-                padding: EdgeInsets.only(left: 16.0),
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0),
                 child: CustomIconButton(
-                  icon: Icon(Icons.more_vert),
+                  icon: const Icon(Icons.more_vert),
+                  onPressed: () {},
                 ),
               ),
               const Text(
@@ -327,9 +328,11 @@ class HomeScreenAppbar extends StatelessWidget implements PreferredSizeWidget {
               ),
               CustomIconButton(
                 icon: Image.asset('images/Search.png'),
+                onPressed: () {},
               ),
               CustomIconButton(
                 icon: Image.asset('images/Notification.png'),
+                onPressed: () {},
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 16.0),

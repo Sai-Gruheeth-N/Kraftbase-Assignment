@@ -44,14 +44,17 @@ class NewPostScreen extends StatelessWidget {
                     children: [
                       CustomIconButton(
                         icon: Image.asset('images/newPostIcons/image.png'),
+                        onPressed: () {},
                       ),
                       const SizedBox(width: 16),
                       CustomIconButton(
                         icon: Image.asset('images/newPostIcons/video.png'),
+                        onPressed: () {},
                       ),
                       const SizedBox(width: 16),
                       CustomIconButton(
                         icon: Image.asset('images/newPostIcons/document.png'),
+                        onPressed: () {},
                       ),
                     ],
                   ),
@@ -98,19 +101,21 @@ class NewPostScreenAppbar extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      elevation: 1.0,
+      elevation: 5,
+      shadowColor: const Color.fromARGB(230, 255, 255, 255),
       actions: [
         Flexible(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Padding(
-                padding: EdgeInsets.only(left: 16.0),
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0),
                 child: CustomIconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.arrow_back_ios_new,
                     size: 16,
                   ),
+                  onPressed: () => Navigator.of(context).pop(),
                 ),
               ),
               Padding(
