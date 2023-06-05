@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kraftbase/home.dart';
+import 'package:kraftbase/resources/app_colors.dart';
 import 'package:kraftbase/screens/login-signup/login_screen.dart';
 
 void main() {
@@ -34,7 +35,9 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text(
             "Kraftbase Assignment",
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(
+              color: AppColors.whiteColor,
+            ),
           ),
           centerTitle: true,
           backgroundColor: const Color(0xFF171D22),
@@ -46,11 +49,13 @@ class HomePage extends StatelessWidget {
               ListTile(
                 title: const Text(
                   "Login Screen",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                    color: AppColors.whiteColor,
+                  ),
                 ),
                 trailing: const Icon(
                   Icons.keyboard_arrow_right_rounded,
-                  color: Colors.white,
+                  color: AppColors.whiteColor,
                 ),
                 onTap: () {
                   Navigator.push(
@@ -62,16 +67,18 @@ class HomePage extends StatelessWidget {
                     ),
                   );
                 },
-                splashColor: Colors.transparent,
+                splashColor: AppColors.transparentColor,
               ),
               ListTile(
                 title: const Text(
                   "Home Screen",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                    color: AppColors.whiteColor,
+                  ),
                 ),
                 trailing: const Icon(
                   Icons.keyboard_arrow_right_rounded,
-                  color: Colors.white,
+                  color: AppColors.whiteColor,
                 ),
                 onTap: () {
                   Navigator.push(
@@ -83,7 +90,7 @@ class HomePage extends StatelessWidget {
                     ),
                   );
                 },
-                splashColor: Colors.transparent,
+                splashColor: AppColors.transparentColor,
               ),
             ],
           ),

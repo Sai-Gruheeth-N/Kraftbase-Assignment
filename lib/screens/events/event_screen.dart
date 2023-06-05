@@ -74,7 +74,7 @@ class EventScreenAppbar extends StatelessWidget implements PreferredSizeWidget {
                 padding: const EdgeInsets.only(right: 16.0),
                 child: CircleAvatar(
                   radius: 20,
-                  backgroundColor: const Color.fromARGB(255, 252, 128, 25),
+                  backgroundColor: AppColors.homeOrangeColor,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.asset(
@@ -113,14 +113,17 @@ class EventScreenTabBar extends StatelessWidget implements PreferredSizeWidget {
       children: [
         const Divider(
           thickness: 0.8,
-          color: Color(0xFF979797),
+          color: AppColors.homeGreyColor,
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 16.0,
+            vertical: 8.0,
+          ),
           child: DecoratedBox(
             decoration: BoxDecoration(
               border: Border.all(
-                color: const Color(0xFF979797),
+                color: AppColors.homeGreyColor,
                 width: 1.0,
               ),
               borderRadius: BorderRadius.circular(50),
@@ -134,14 +137,14 @@ class EventScreenTabBar extends StatelessWidget implements PreferredSizeWidget {
               indicatorSize: TabBarIndicatorSize.label,
               indicator: BoxDecoration(
                 borderRadius: BorderRadius.circular(50),
-                color: const Color(0xFFFC8019),
+                color: AppColors.homeOrangeColor,
               ),
               indicatorPadding: const EdgeInsets.symmetric(vertical: 4.0),
               labelColor: AppColors.whiteColor,
-              unselectedLabelColor: const Color(0xFF979797),
+              unselectedLabelColor: AppColors.homeGreyColor,
               labelStyle: labelFontStyle,
               unselectedLabelStyle: labelFontStyle,
-              dividerColor: Colors.transparent,
+              dividerColor: AppColors.transparentColor,
             ),
           ),
         ),

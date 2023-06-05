@@ -28,7 +28,7 @@ class UpcomingTabView extends StatelessWidget {
           height: MediaQuery.of(context).size.height,
           width: double.infinity,
           decoration: const BoxDecoration(
-            color: Color(0xFFF9F9F9),
+            color: AppColors.homeBodyContainerColor,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20.0),
               topRight: Radius.circular(20.0),
@@ -102,7 +102,7 @@ class EventCard extends StatelessWidget {
                       style: GoogleFonts.readexPro(
                         fontWeight: FontWeight.w600,
                         fontSize: 14,
-                        color: const Color(0xFF292929),
+                        color: AppColors.titleColor,
                       ),
                     ),
                     Text(
@@ -110,7 +110,7 @@ class EventCard extends StatelessWidget {
                       style: GoogleFonts.readexPro(
                         fontWeight: FontWeight.w400,
                         fontSize: 12,
-                        color: const Color(0xFF292929),
+                        color: AppColors.titleColor,
                       ),
                     ),
                   ],
@@ -126,7 +126,7 @@ class EventCard extends StatelessWidget {
                 fontWeight: FontWeight.w400,
                 fontSize: 8.0,
                 height: 1.8,
-                color: const Color(0xFF292929),
+                color: AppColors.titleColor,
               ),
             ),
           ),
@@ -142,7 +142,7 @@ class EventCard extends StatelessWidget {
                     horizontal: 8,
                   ),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFF1F1F1),
+                    color: AppColors.daysContainerColor,
                     borderRadius: BorderRadius.circular(25.0),
                   ),
                   child: Row(
@@ -151,7 +151,7 @@ class EventCard extends StatelessWidget {
                       Image.asset(
                         'images/eventCard/shuffle.png',
                         scale: 1.5,
-                        color: const Color(0xFF717171),
+                        color: AppColors.daysContainerContentColor,
                       ),
                       const SizedBox(width: 4),
                       Text(
@@ -159,7 +159,7 @@ class EventCard extends StatelessWidget {
                         style: GoogleFonts.readexPro(
                           fontWeight: FontWeight.w600,
                           fontSize: 10.0,
-                          color: const Color(0xFF717171),
+                          color: AppColors.daysContainerContentColor,
                         ),
                       ),
                     ],
@@ -214,7 +214,7 @@ class EventCard extends StatelessWidget {
                     ),
                     Container(
                       decoration: BoxDecoration(
-                        color: const Color(0xFFFFD55D),
+                        color: AppColors.registerButtonColor,
                         borderRadius: BorderRadius.circular(14.0),
                       ),
                       child: Padding(
@@ -225,7 +225,7 @@ class EventCard extends StatelessWidget {
                         child: Text(
                           'Register',
                           style: GoogleFonts.readexPro(
-                            color: const Color(0xFF212121),
+                            color: AppColors.registerButtonTextColor,
                             fontWeight: FontWeight.w400,
                             fontSize: 10.0,
                           ),

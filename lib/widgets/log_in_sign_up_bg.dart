@@ -22,8 +22,8 @@ class LogInSignUpBG extends StatelessWidget {
             ),
             gradient: RadialGradient(
               colors: [
-                Color.fromARGB(255, 74, 40, 156),
-                Color.fromARGB(255, 0, 9, 43),
+                AppColors.backgroundGradientA,
+                AppColors.backgroundGradientB,
               ],
             ),
           ),

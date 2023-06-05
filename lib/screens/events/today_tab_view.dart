@@ -30,7 +30,7 @@ class TodayTabView extends StatelessWidget {
           height: MediaQuery.of(context).size.height,
           width: double.infinity,
           decoration: const BoxDecoration(
-            color: Color(0xFFF9F9F9),
+            color: AppColors.homeBodyContainerColor,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20.0),
               topRight: Radius.circular(20.0),
@@ -49,7 +49,7 @@ class TodayTabView extends StatelessWidget {
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(
-                      color: const Color(0xFFF2F2F2),
+                      color: AppColors.todayContainerColor,
                       borderRadius: BorderRadius.circular(24.0),
                     ),
                     child: Padding(
@@ -62,7 +62,7 @@ class TodayTabView extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: GoogleFonts.readexPro(
                               fontWeight: FontWeight.w400,
-                              color: const Color(0xFF212121),
+                              color: AppColors.todayContainerDayTextColor,
                             ),
                           ),
                           Text(
@@ -70,7 +70,7 @@ class TodayTabView extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: GoogleFonts.readexPro(
                               fontWeight: FontWeight.w400,
-                              color: const Color(0xFF686868),
+                              color: AppColors.todayContainerDateTextColor,
                             ),
                           ),
                         ],
@@ -81,7 +81,7 @@ class TodayTabView extends StatelessWidget {
                 const SizedBox(width: 8.0),
                 Container(
                   decoration: BoxDecoration(
-                    color: const Color(0xFFFFD55D),
+                    color: AppColors.filterButtonColor,
                     borderRadius: BorderRadius.circular(14.0),
                   ),
                   child: Padding(
@@ -93,12 +93,12 @@ class TodayTabView extends StatelessWidget {
                       children: [
                         const Icon(
                           Icons.filter_alt_outlined,
-                          color: Color(0xFF0D1C2E),
+                          color: AppColors.filterIconColor,
                         ),
                         Text(
                           'Filter',
                           style: GoogleFonts.readexPro(
-                            color: const Color(0xFF212121),
+                            color: AppColors.todayContainerDateTextColor,
                             fontWeight: FontWeight.w400,
                           ),
                         ),
@@ -251,7 +251,7 @@ class EventCard extends StatelessWidget {
               const Icon(
                 Icons.signal_cellular_alt,
                 size: 15,
-                color: Color(0xFF37B622),
+                color: AppColors.signalIconColor,
               ),
               Text(
                 'Live',
@@ -290,7 +290,7 @@ class EventCard extends StatelessWidget {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: const Color(0xFFFFD55D),
+                    color: AppColors.filterButtonColor,
                     borderRadius: BorderRadius.circular(14.0),
                   ),
                   child: Padding(
@@ -301,7 +301,7 @@ class EventCard extends StatelessWidget {
                     child: Text(
                       'Enroll Now',
                       style: GoogleFonts.readexPro(
-                        color: const Color(0xFF212121),
+                        color: AppColors.todayContainerDayTextColor,
                         fontWeight: FontWeight.w400,
                         fontSize: 10.0,
                       ),

@@ -40,89 +40,61 @@ class _HomeState extends State<Home> {
       body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(
-            icon: ColorFiltered(
-              colorFilter: _selectedIndex == 0
-                  ? const ColorFilter.mode(
-                      Color(0xFFFC8019),
-                      BlendMode.srcIn,
-                    )
-                  : const ColorFilter.mode(
-                      Color(0xFF979797),
-                      BlendMode.srcIn,
-                    ),
-              child: Image.asset('images/bottomNavBarIcons/home.png'),
-            ),
-            label: "Home",
+          customBottomNavBarItem(
+            0,
+            'images/bottomNavBarIcons/home.png',
+            "Home",
           ),
-          BottomNavigationBarItem(
-            icon: ColorFiltered(
-              colorFilter: _selectedIndex == 1
-                  ? const ColorFilter.mode(
-                      Color(0xFFFC8019),
-                      BlendMode.srcIn,
-                    )
-                  : const ColorFilter.mode(
-                      Color(0xFF979797),
-                      BlendMode.srcIn,
-                    ),
-              child: Image.asset('images/bottomNavBarIcons/chat.png'),
-            ),
-            label: "Chat",
+          customBottomNavBarItem(
+            1,
+            'images/bottomNavBarIcons/chat.png',
+            "Chat",
           ),
-          BottomNavigationBarItem(
-            icon: ColorFiltered(
-              colorFilter: _selectedIndex == 2
-                  ? const ColorFilter.mode(
-                      Color(0xFFFC8019),
-                      BlendMode.srcIn,
-                    )
-                  : const ColorFilter.mode(
-                      Color(0xFF979797),
-                      BlendMode.srcIn,
-                    ),
-              child: Image.asset('images/bottomNavBarIcons/ai.png'),
-            ),
-            label: "AI",
+          customBottomNavBarItem(
+            2,
+            'images/bottomNavBarIcons/ai.png',
+            "AI",
           ),
-          BottomNavigationBarItem(
-            icon: ColorFiltered(
-              colorFilter: _selectedIndex == 3
-                  ? const ColorFilter.mode(
-                      Color(0xFFFC8019),
-                      BlendMode.srcIn,
-                    )
-                  : const ColorFilter.mode(
-                      Color(0xFF979797),
-                      BlendMode.srcIn,
-                    ),
-              child: Image.asset('images/bottomNavBarIcons/learn.png'),
-            ),
-            label: "Learn",
+          customBottomNavBarItem(
+            3,
+            'images/bottomNavBarIcons/learn.png',
+            "Learn",
           ),
-          BottomNavigationBarItem(
-            icon: ColorFiltered(
-              colorFilter: _selectedIndex == 4
-                  ? const ColorFilter.mode(
-                      Color(0xFFFC8019),
-                      BlendMode.srcIn,
-                    )
-                  : const ColorFilter.mode(
-                      Color(0xFF979797),
-                      BlendMode.srcIn,
-                    ),
-              child: Image.asset('images/bottomNavBarIcons/events.png'),
-            ),
-            label: "Events",
+          customBottomNavBarItem(
+            4,
+            'images/bottomNavBarIcons/events.png',
+            "Events",
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: const Color(0xFFFC8019),
-        unselectedItemColor: const Color(0xFF979797),
+        selectedItemColor: AppColors.homeOrangeColor,
+        unselectedItemColor: AppColors.homeGreyColor,
         showUnselectedLabels: true,
         type: BottomNavigationBarType.fixed,
         onTap: _onItemTap,
       ),
+    );
+  }
+
+  BottomNavigationBarItem customBottomNavBarItem(
+    int index,
+    String imgPath,
+    String labelText,
+  ) {
+    return BottomNavigationBarItem(
+      icon: ColorFiltered(
+        colorFilter: _selectedIndex == index
+            ? const ColorFilter.mode(
+                AppColors.homeOrangeColor,
+                BlendMode.srcIn,
+              )
+            : const ColorFilter.mode(
+                AppColors.homeGreyColor,
+                BlendMode.srcIn,
+              ),
+        child: Image.asset(imgPath),
+      ),
+      label: labelText,
     );
   }
 }

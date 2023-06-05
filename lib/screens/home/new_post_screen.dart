@@ -15,7 +15,7 @@ class NewPostScreen extends StatelessWidget {
         height: 168,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-          color: const Color(0xFFF6F8FC),
+          color: AppColors.textFieldBGColor,
           borderRadius: BorderRadius.circular(10.0),
         ),
         child: Padding(
@@ -62,10 +62,10 @@ class NewPostScreen extends StatelessWidget {
                     child: Container(
                       height: 32,
                       decoration: BoxDecoration(
-                        color: const Color.fromARGB(52, 252, 127, 25),
+                        color: AppColors.orangeWithOpacity,
                         borderRadius: BorderRadius.circular(65.0),
                         border: Border.all(
-                          color: const Color(0xFFFC8019),
+                          color: AppColors.homeOrangeColor,
                         ),
                       ),
                       child: TextButton(
@@ -76,7 +76,7 @@ class NewPostScreen extends StatelessWidget {
                           style: GoogleFonts.readexPro(
                             fontWeight: FontWeight.w700,
                             fontSize: 9.0,
-                            color: const Color(0xFFFC8019),
+                            color: AppColors.homeOrangeColor,
                           ),
                         ),
                       ),
@@ -102,7 +102,7 @@ class NewPostScreenAppbar extends StatelessWidget
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 5,
-      shadowColor: const Color.fromARGB(230, 255, 255, 255),
+      shadowColor: AppColors.appBarShadow,
       actions: [
         Flexible(
           child: Row(
@@ -124,7 +124,7 @@ class NewPostScreenAppbar extends StatelessWidget
                   width: 98,
                   height: 32,
                   decoration: BoxDecoration(
-                    color: const Color(0xFFFC8019),
+                    color: AppColors.homeOrangeColor,
                     borderRadius: BorderRadius.circular(65.0),
                   ),
                   child: TextButton(

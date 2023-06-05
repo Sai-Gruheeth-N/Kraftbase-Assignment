@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
             ),
           );
         },
-        backgroundColor: const Color(0xFFFC8019),
+        backgroundColor: AppColors.homeOrangeColor,
         shape: const CircleBorder(),
         child: const Icon(
           Icons.add,
@@ -52,7 +52,7 @@ class Feed extends StatelessWidget {
           height: MediaQuery.of(context).size.height,
           width: double.infinity,
           decoration: const BoxDecoration(
-            color: Color(0xFFF9F9F9),
+            color: AppColors.homeBodyContainerColor,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20.0),
               topRight: Radius.circular(20.0),
@@ -67,12 +67,14 @@ class Feed extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: const Color(0xFFFC8019),
+                    color: AppColors.homeOrangeColor,
                     borderRadius: BorderRadius.circular(24.0),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
-                        vertical: 4.0, horizontal: 8.0),
+                      vertical: 4.0,
+                      horizontal: 8.0,
+                    ),
                     child: Text(
                       'Daily Posts',
                       style: GoogleFonts.readexPro(
@@ -85,7 +87,7 @@ class Feed extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: const Color(0xFF979797),
+                      color: AppColors.homeGreyColor,
                     ),
                     borderRadius: BorderRadius.circular(24.0),
                   ),
@@ -97,7 +99,7 @@ class Feed extends StatelessWidget {
                     child: Text(
                       'Discussion & Polling',
                       style: GoogleFonts.readexPro(
-                        color: const Color(0xFF939393),
+                        color: AppColors.unselectedTabColor,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
@@ -141,7 +143,7 @@ class Feed extends StatelessWidget {
                                   style: GoogleFonts.readexPro(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 14.0,
-                                    color: const Color(0xFF232323),
+                                    color: AppColors.feedCardTitleColor,
                                   ),
                                 ),
                                 Text(
@@ -149,7 +151,7 @@ class Feed extends StatelessWidget {
                                   style: GoogleFonts.readexPro(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 8.0,
-                                    color: const Color(0xFFBEBEBE),
+                                    color: AppColors.feedCardSubtitleColor,
                                   ),
                                 ),
                               ],
@@ -323,7 +325,7 @@ class HomeScreenAppbar extends StatelessWidget implements PreferredSizeWidget {
                 'Learning Community',
                 style: TextStyle(
                   fontFamily: 'Grozel',
-                  color: Color.fromARGB(255, 252, 128, 25),
+                  color: AppColors.homeOrangeColor,
                 ),
               ),
               CustomIconButton(
@@ -338,7 +340,7 @@ class HomeScreenAppbar extends StatelessWidget implements PreferredSizeWidget {
                 padding: const EdgeInsets.only(right: 16.0),
                 child: CircleAvatar(
                   radius: 20,
-                  backgroundColor: const Color.fromARGB(255, 252, 128, 25),
+                  backgroundColor: AppColors.homeOrangeColor,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.asset(
